@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="woManService" class="com.yt.service.impl.WoManImpl">
+       <property name="woManDao" ref="woManDao"/>
+    </bean>
+
+    <bean id="woManDao" class="com.yt.dao.WoManDaoImpl" />
+
+    <bean id="manService" class="com.yt.service.impl.ManImpl">
+        <constructor-arg name="manDao" ref="manDao"/>
+    </bean>
+
+    <bean id="manDao" class="com.yt.dao.manDaoImpl" />
+
+</beans>
